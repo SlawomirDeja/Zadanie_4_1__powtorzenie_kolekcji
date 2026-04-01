@@ -19,12 +19,13 @@ public class Zadanie41PowtorzenieKolekcjiApplication {
 		companies.add("ALCATEL");
 
 		String concatenatedCompanies = "";
-		for (int i = 0; i < companies.size(); i++) {
-			concatenatedCompanies += companies.get(i);
-			if (i < companies.size()-1) concatenatedCompanies += ", ";
-		}
 
-		for (String company: companies)
+		for (String company : companies) {
+				if (concatenatedCompanies.length() > 0) {
+					concatenatedCompanies += ", ";
+				}
+				concatenatedCompanies += company;
+		}
 
 		System.out.println(concatenatedCompanies);
 	}
